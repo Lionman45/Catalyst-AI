@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Suntree AI</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+
+<!-- Markdown parser -->
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+
+<body class="theme-dark">
+
+<div class="background"></div>
+
+<div class="app">
+
+    <div class="sidebar">
+        <div class="logo">Cata<span>lyst</span></div>
+
+        <div class="selectors">
+            <label>Chatbot</label>
+            <select id="modelSelector">
+                <option value="openrouter/auto">Auto</option>
+                <option value="meta-llama/llama-3-8b-instruct">Llama 3</option>
+                <option value="mistralai/mistral-7b-instruct">Mistral</option>
+                <option value="openai/gpt-4o-mini">GPT-4o Mini</option>
+            </select>
+
+            <label>Theme</label>
+            <select id="themeSelector">
+                <!-- 25 themes -->
+                <option value="dark">Dark</option>
+                <option value="matrix">Matrix</option>
+                <option value="glass">Glass</option>
+                <option value="cyberpunk">Cyberpunk</option>
+                <option value="sunset">Sunset</option>
+                <option value="ocean">Ocean</option>
+                <option value="forest">Forest</option>
+                <option value="neon">Neon</option>
+                <option value="violet">Violet</option>
+                <option value="rose">Rose</option>
+                <option value="orange">Orange</option>
+                <option value="blue">Blue</option>
+                <option value="red">Red</option>
+                <option value="green">Green</option>
+                <option value="purple">Purple</option>
+                <option value="pink">Pink</option>
+                <option value="gold">Gold</option>
+                <option value="silver">Silver</option>
+                <option value="retro">Retro</option>
+                <option value="aqua">Aqua</option>
+                <option value="lava">Lava</option>
+                <option value="ice">Ice</option>
+                <option value="storm">Storm</option>
+                <option value="space">Space</option>
+                <option value="violetglass">Violet Glass</option>
+            </select>
+        </div>
+
+        <div id="chatList"></div>
+    </div>
+
+    <div class="chat">
+        <div id="messages"></div>
+
+        <div class="inputBar">
+            <input id="messageInput" placeholder="Ask something..." autocomplete="off">
+            <button id="sendBtn">Send</button>
+        </div>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
