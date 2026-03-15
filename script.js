@@ -25,7 +25,7 @@ aiModeCheckbox.addEventListener("change",()=>aiConversationMode=aiModeCheckbox.c
 
 // Request AI response
 async function requestAssistantResponse(messages, model){
-    const response = await fetch("http://localhost:3000/ask",{
+    const response = await fetch("https://catalyst-backend-kgch.onrender.com",{
         method:"POST",
         headers:{"Content-Type":"application/json"},
         body:JSON.stringify({ messages, model })
