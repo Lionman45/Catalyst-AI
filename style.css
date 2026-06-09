@@ -7,10 +7,14 @@
     font-family:Inter,sans-serif;
 }
 
+html,
+body{
+    height:100%;
+}
+
 body{
     background:#212121;
     color:#ececec;
-    height:100vh;
     overflow:hidden;
 }
 
@@ -24,15 +28,20 @@ body{
 .app{
     display:flex;
     height:100vh;
+    overflow:hidden;
 }
 
 /* ---------- SIDEBAR ---------- */
 
 .sidebar{
     width:260px;
+    min-width:260px;
+
     background:#171717;
     border-right:1px solid #2f2f2f;
+
     padding:12px;
+
     display:flex;
     flex-direction:column;
     gap:12px;
@@ -50,11 +59,15 @@ body{
 
 #newChat{
     width:100%;
+
     padding:12px;
+
     border:none;
     border-radius:10px;
+
     background:#2a2a2a;
     color:white;
+
     cursor:pointer;
     transition:.2s;
 }
@@ -72,8 +85,10 @@ body{
 select{
     background:#2a2a2a;
     color:white;
+
     border:1px solid #3a3a3a;
     border-radius:8px;
+
     padding:10px;
 }
 
@@ -81,38 +96,55 @@ select{
 
 .chat{
     flex:1;
+
     display:flex;
     flex-direction:column;
-    max-width:900px;
+
     width:100%;
-    margin:auto;
+    max-width:900px;
+
+    margin:0 auto;
+
+    min-height:0;
 }
 
 /* ---------- MESSAGES ---------- */
 
 #messages{
     flex:1;
+
     overflow-y:auto;
-    padding:40px 24px;
+    overflow-x:hidden;
+
+    min-height:0;
+
+    padding:40px 24px 120px;
 }
 
-/* assistant messages */
+/* ---------- MESSAGE STYLES ---------- */
 
 .message{
     margin-bottom:28px;
+
     line-height:1.75;
     font-size:15px;
+
     white-space:pre-wrap;
+    word-wrap:break-word;
 }
 
 /* user */
 
 .message.user{
     background:#303030;
+
     padding:14px 18px;
+
     border-radius:18px;
+
     width:fit-content;
     max-width:75%;
+
     margin-left:auto;
 }
 
@@ -121,11 +153,13 @@ select{
 .message.ai{
     background:none;
     border:none;
+
     max-width:100%;
+
     padding:0;
 }
 
-/* markdown */
+/* ---------- MARKDOWN ---------- */
 
 .message strong{
     font-weight:600;
@@ -133,17 +167,23 @@ select{
 
 .message code{
     background:#2d2d2d;
+
     padding:2px 6px;
+
     border-radius:6px;
+
     font-family:Consolas,monospace;
 }
 
 .message pre{
     background:#171717;
+
     border:1px solid #333;
     border-radius:12px;
+
     padding:16px;
     margin-top:10px;
+
     overflow-x:auto;
 }
 
@@ -171,14 +211,17 @@ select{
     padding:10px 14px;
 
     max-width:900px;
-    margin:auto;
+    margin:0 auto;
 }
 
 input{
     flex:1;
+
     background:transparent;
+
     border:none;
     outline:none;
+
     color:white;
     font-size:15px;
 }
@@ -189,6 +232,7 @@ input::placeholder{
 
 button{
     border:none;
+
     background:#10a37f;
     color:white;
 
@@ -196,8 +240,8 @@ button{
     height:36px;
 
     border-radius:50%;
-    cursor:pointer;
 
+    cursor:pointer;
     transition:.2s;
 }
 
